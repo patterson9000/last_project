@@ -91,7 +91,7 @@ input{
 .btn2{
     display: inline-block;
     margin-top: 10px;
-    margin-left: 630px;
+    /*margin-left: 630px;*/
     color: aliceblue;
     width: 100px;
     padding: 10px;

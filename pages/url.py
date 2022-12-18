@@ -39,7 +39,5 @@ urlpatterns = [
     path('log/', log_details_page, name="logs"),
     path('5k_run/', FiveKPageViews.as_view(), name="5k_run"),
     path('programs/', ProgramsPageViews.as_view(), name="programs"),
-    #signup#
-    #path('register/', views.sign_up, name='register'),
 ]
 

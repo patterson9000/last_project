@@ -69,6 +69,7 @@ header{
     flex-wrap: wrap;
     flex-direction: row;
 }
+
 .card {
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     max-width: 200px;
@@ -101,7 +102,15 @@ a {
 button:hover, a:hover {
     opacity: 0.7;
 }
+/*comment*/
+.container2{
+    height: 60%;
+    width: 60%;
+}
+.card-body{
+    margin-left: 200px;
 
+}
 /*footer*/
 .contacts_icons2{
     background-color: rgb(216, 214, 214);

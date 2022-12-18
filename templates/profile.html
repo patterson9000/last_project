@@ -1,87 +1,96 @@
-    
+{% extends "base.html" %} {% load crispy_forms_tags %} {% block content %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="google" content="notranslate" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/3865fe1c3d.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css?family=Roboto:400,700"
+      rel="stylesheet"
+    />
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'css/profile.css' %}" />
 
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <title>Profile</title>
+  </head>
+  <body>
+    <!--nav-->
+    <div class="main">
+      <header>
+        <nav class="navigation">
+          <div class="WODlogo">
+            <a href="/pages/home/"
+              ><h3>
+                <i style="color: red">W</i><i style="color: yellow">O</i
+                ><i style="color: blue">D</i>
+              </h3></a
+            >
+          </div>
 
+          <div class="search_bar">
+            <input type="text" placeholder="search" />
+            <a class="search_bar" href=""><i class="fas fa-search"></i></a>
+          </div>
 
+          <div class="contacts_icons">
+            <button class="program" onclick="location.href='../sport/';">
+              Programs
+            </button>
+            <button class="stats" onclick="location.href='../log/';">
+              Logs
+            </button>
+          </div>
+        </nav>
+      </header>
+      <!--profile-->
 
-        {% block content %} 
-        <!DOCTYPE html>
-        <html lang="en">
-        <head>
-            <meta charset="UTF-8" />
-            <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-            <meta name="google" content="notranslate" />
-            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-            <script
-            src="https://kit.fontawesome.com/3865fe1c3d.js"
-            crossorigin="anonymous"
-            ></script>
-            <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
-            {% load static %}<link rel="stylesheet" href="{% static 'css/profile.css' %}" />
-
-            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
-                crossorigin="anonymous" />
-            <title>Profile</title>
-        </head>
-        <body>
-            <!--nav-->
-            <div class="main">
-            <header>
-                <nav class="navigation">
-                <div class="WODlogo">
-                    
-                    <a href="/pages/home/"><h3><i style="color: red;">W</i><i style="color: yellow;">O</i><i style="color:blue ;">D</i></h3></a>
-                </div>
-
-                <div class="search_bar">
-                    <input type="text" placeholder="search" />
-                    <a class="search_bar" href=""><i class="fas fa-search"></i></a>
-                </div>
-
-                <div class="contacts_icons">
-                    <button class="program" onclick="location.href='../sport/';">Programs</button>
-                    <button class="stats" onclick= "location.href='../log/';">Logs</button>
-                    
-                </div>
-                </nav>
-                
-            <!--profile-->
-            
-        <div class="profile"><img src="{% static 'img/profile.png' %}" />
+      <div class="profile">
+        <img src="{% static 'img/profile.png' %}" />
         <div class="detail">
-            <div class="post">
+          <div class="post">
             <h2>0</h2>
             <p>Post</p>
-            </div>
-            <div class="followers">
+          </div>
+          <div class="followers">
             <h2>0</h2>
             <p>Followers</p>
-            </div>
-            <div class="following">
+          </div>
+          <div class="following">
             <h2>0</h2>
             <p>Following</p>
-            </div>
+          </div>
         </div>
-        <br/>
+        <br />
         <div class="info">
-            <div class="name">
+          <div class="name">
             <h3>Bret Patterson</h3>
-            </div>
-            <div class="service">
+          </div>
+          <div class="service">
             <h3>Product/Service</h3>
-            </div>
-            <div class="work">
+          </div>
+          <div class="work">
             <h3>Programmer</h3>
-            </div>
-            <br />
-            <div class="button">
+          </div>
+          <br />
+          <div class="button">
             <div class="edit"><button>Edit Profile</button></div>
-            
-            </div>
+          </div>
         </div>
-    </div>
-        
-    
-        <!-- Navigation -->
+      </div>
+
+      <!-- Navigation 
         <nav class="navbar navbar-expand-lg navbar-light bg-light shadow" id="mainNav">
             <div class="container-fluid">
                 <a class="navbar-brand"></a>
@@ -103,27 +112,14 @@
                     </ul>
                 </div>
             </div>
-        </nav>
-        <!---->
-    
-    {% for post in posts %}
-        <p>{{post.author}}</p>
-        <p>{{post.caption}}</p>
-    {% endfor %}
+        </nav>-->
+      <!---->
 
-
-<div class="col-md-4 float-right ">
-    <div class="card my-4">
-            <h5 class="card-header">About Us</h5>
-        <div class="card-body">
-            <p class="card-text"> This awesome blog is made on the top of our Favourite full stack Framework 'Django', follow up the tutorial to learn how we made it..!</p>
-            <a href="https://djangocentral.com/building-a-blog-application-with-django"
-                class="btn btn-danger">Know more!</a>
-        </div>
+      {% for post in posts %}
+      <p>{{post.author}}</p>
+      <p>{{post.caption}}</p>
+      {% endfor %}
     </div>
-    </div>
-</div>
     {% endblock content %}
-    </body>
-    </html>
-
+  </body>
+</html>

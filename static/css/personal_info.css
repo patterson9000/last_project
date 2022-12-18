@@ -5,8 +5,8 @@ body{
     left: 50%;
     transform: translate(-50%, -50%);
 }
-h3{
-    
+h2{
+    margin-left: 150px;
 }
 .date{
     margin-bottom: 40px;

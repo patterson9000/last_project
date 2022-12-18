@@ -23,6 +23,6 @@ urlpatterns = [
     path('new/', PostCreateView.as_view(), name="new"),
     path('<int:edit>/edit/', PostUpdateView.as_view(), name='edit'),
     path('<int:pk>/delete/', PostDeleteView.as_view(), name='delete'),
-    #FB#
-
+    
+    
 ]
